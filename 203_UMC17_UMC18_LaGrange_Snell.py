@@ -1,0 +1,37 @@
+#MrG 2018.0628 UMC17+18 LaGrange + Snell
+#1) Find the max value of f(x,y)=4*x*y (x>0, y>0) subject to the constraint g(x,y)==x^2/9+y^2/16-1==0
+show("#1) Find the max value of f(x,y)=4*x*y (x>0, y>0) subject to the constraint g(x,y)==x^2/9+y^2/16-1==0")
+var('y,z,l')
+f=4*x*y;show("f(x,y)=",f)
+fx=diff(f,x);show("fx=",fx)
+fy=diff(f,y);show("fy=",fy)
+g=x^2/9+y^2/16-1;show("g(x,y)=",g)
+gx=diff(g,x);show("gx=",gx)
+gy=diff(g,y);show("gy=",gy)
+show(solve([4*y==l*2*x/9,4*x==l*y/8,x^2/9+y^2/16==1],(x,y,l)))
+show("")
+
+#2) Find the max value of f(x,y)=x*y*z (x>0, y>0, z>0) subject to the constraint g(x,y)==3*x*y*4*x*z+4*y*z-1296==0
+show("#2) Find the max value of f(x,y)=x*y*z (x>0, y>0, z>0) subject to the constraint g(x,y)==3*x*y+4*x*z+4*y*z-1296==0")
+f=x*y*z;show("f(x,y,z)=",f)
+fx=diff(f,x);show("fx=",fx)
+fy=diff(f,y);show("fy=",fy)
+fz=diff(f,z);show("fz=",fz)
+g=3*x*y+4*x*z+4*y*z-1296;show("g(x,y,z)=",g)
+gx=diff(g,x);show("gx=",gx)
+gy=diff(g,y);show("gy=",gy)
+gz=diff(g,z);show("gz=",gz)
+show(solve([fx==l*gx,fy==l*gy,fz==l*gz,g==0],(x,y,z,l)))
+show("")
+
+#3) Find the max value of f(x,y)=x*y*z (x>0, y>0, z>0) subject to the constraint g(x,y)==x+2*y+2*z-108==0
+show("#3) Find the max value of f(x,y)=x*y*z (x>0, y>0, z>0) subject to the constraint g(x,y)==x+2*y+2*z-108==0")
+f=x*y*z;show("f(x,y,z)=",f)
+fx=diff(f,x);show("fx=",fx)
+fy=diff(f,y);show("fy=",fy)
+fz=diff(f,z);show("fz=",fz)
+g=x+2*y+2*z-108;show("g(x,y,z)=",g)
+gx=diff(g,x);show("gx=",gx)
+gy=diff(g,y);show("gy=",gy)
+gz=diff(g,z);show("gz=",gz)
+show(solve([fx==l*gx,fy==l*gy,fz==l*gz,g==0],(x,y,z,l)))

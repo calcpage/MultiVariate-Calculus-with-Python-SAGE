@@ -1,0 +1,18 @@
+#MrG 2018.0628 UMC16 Tangent Planes
+#1) Given the level surface f(x,y,z)=x^2+y^2-z==0, find the tangent plane at (1,1,2)
+show("#1) Given the level surface f(x,y,z)=x^2+y^2-z==0, find the tangent plane at (1,1,2)")
+f(x,y,z)=x^2+y^2-z;show("f(x,y,z)=",f(x,y,z))
+fx(x,y,z)=diff(f(x,y,z),x);show("fx(x,y,z)=",fx(x,y,z))
+fy(x,y,z)=diff(f(x,y,z),y);show("fy(x,y,z)=",fy(x,y,z))
+fz(x,y,z)=diff(f(x,y,z),z);show("fz(x,y,z)=",fz(x,y,z))
+show("grad(x,y,z)=",vector([fx(x,y,z),fy(x,y,z),fz(x,y,z)]))
+show("grad(1,1,2)=",vector([fx(1,1,2),fy(1,1,2),fz(1,1,2)]))
+v=vector([x-1,y-1,z-2]);show("v=",v)
+show(vector([fx(1,1,2),fy(1,1,2),fz(1,1,2)]).dot_product(v)==0)
+show("Tangent Plane Approx: (z-2)==2*(x-1)+2*(y-1)")
+show("Total Differential: deltaZ==fx(x,y,z)*deltaX+fy(x,y,z)*deltaY")
+p1=implicit_plot3d(x^2+y^2-z==0,(x,-3,3),(y,-3,3),(z,-3,3))
+p2=implicit_plot3d(2*x+2*y-z-2==0,(x,-3,3),(y,-3,3),(z,-3,3),color='green')
+p3=point([1,1,2],color='red')
+(p1+p2+p3).show()
+

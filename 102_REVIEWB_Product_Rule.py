@@ -1,0 +1,56 @@
+#MrG 2015.0619 REVIEWB Product & Quotient Rules (filks: The Product Rule Song & Calculus Song (Quotient Rule))
+#1) h(x)=f(x)*g(x)=(x^2)*(x^3), find h'(x)
+show("#1) h(x)=f(x)*g(x)=(x^2)*(x^3), find h'(x)")
+f(x)=x^2
+g(x)=x^3
+show(diff(f(x),x))
+show(diff(g(x),x))
+show(diff(f(x)*g(x),x))
+show(f(x)*diff(g(x),x)+g(x)*diff(f(x),x))
+show("")
+
+#2) h(x)=f(x)*g(x)=(x^2)*(x^3), find h'(x)
+show("#2) h(x)=f(x)*g(x)=(x^2)*(x^3), find h'(x).")
+f(x)=x^2
+g(x)=sin(x)
+show(diff(f(x),x))
+show(diff(g(x),x))
+show(diff(f(x)*g(x),x))
+show(f(x)*diff(g(x),x)+g(x)*diff(f(x),x))
+show("")
+
+#3) h(x)=f(x)*g(x)=(x^2)*(x^3), find h'(x)
+show("#3) h(x)=f(x)*g(x)=(x^2)*(x^3), find h'(x)")
+f(x)=x^3
+g(x)=cos(x)
+show(diff(f(x),x))
+show(diff(g(x),x))
+show(diff(f(x)*g(x),x))
+show(f(x)*diff(g(x),x)+g(x)*diff(f(x),x))
+show("")
+
+#4) find the derivative of f(x)=(x^2-1)/(x^2+1)
+show("#4) find the derivative of f(x)=(x^2-1)/(x^2+1)")
+f(x)=(x^2-1)/(x^2+1)
+show(diff(f(x),x).simplify_rational())
+p1=plot(f(x),color='red')
+p2=plot(diff(f(x),x),color='green')
+show(p1+p2)
+show("")
+
+#5) find the derivative of f(x)=(x^2+1)*(x^3+3)
+show("#5) find the derivative of f(x)=(x^2+1)*(x^3+3)")
+f(x)=(x^2+1)*(x^3+3)
+show(diff(f(x),x).expand())
+p1=plot(f(x),color='red')
+p2=plot(diff(f(x),x),color='green')
+show(p1+p2)
+show("")
+
+#6) find the derivative of f(x)=sin(x)/cos(x)
+show("#6) find the derivative of f(x)=sin(x)/cos(x)")
+f(x)=sin(x)/cos(x)
+show(diff(f(x),x).simplify_trig())
+p1=plot(f(x),color='red')
+p2=plot(diff(f(x),x),color='green')
+p1+p2

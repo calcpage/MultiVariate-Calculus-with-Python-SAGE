@@ -1,0 +1,26 @@
+#MrG 2018.0630 UMC21 Polar Coordinates
+#1a) Evaluate: integral(integral(y,x,0,sqrt(4-y^2)),y,0,2)
+show("#1a) Evaluate: integral(integral(y,x,0,sqrt(4-y^2)),y,0,2)")
+var('y')
+show(integral(integral(y,x,0,sqrt(4-y^2)),y,0,2))
+show(integral(integral(y,x,0,sqrt(4-y^2)),y,0,2).n())
+show("")
+
+#1b) Evaluate: integral(integral(r*sin(t)*r,r,0,2),t,0,pi/2)
+show("#1b) Evaluate: integral(integral(r*sin(t)*r,r,0,2),t,0,pi/2)")
+var('r,t')
+show(integral(integral(r*sin(t)*r,r,0,2),t,0,pi/2))
+show(integral(integral(r*sin(t)*r,r,0,2),t,0,pi/2).n())
+show("")
+
+#2) Find the area enclosed by all 3 petals of this rose: r=3*cos(3*t)
+show("#2) Find the area enclosed by all 3 petals of this rose: r=3*cos(3*t)")
+show(3*integral(integral(r,r,0,3*cos(3*t)),t,-pi/6,pi/6))
+show(3*integral(integral(r,r,0,3*cos(3*t)),t,-pi/6,pi/6).n())
+show(polar_plot(3*cos(3*t),-pi/6,pi/6))
+show("")
+
+#3) Find the volume of ice cream bounded above by the hemisphere z=sqrt(2-x^2-y^2 and below by the cone z=sqrt(x^2+y^2)
+show("#3) Find the volume of ice cream bounded above by the hemisphere z=sqrt(2-x^2-y^2 and below by the cone z=sqrt(x^2+y^2)")
+show(integral(integral((sqrt(2-r^2)-r)*r,r,0,1),t,0,2*pi))
+show(integral(integral((sqrt(2-r^2)-r)*r,r,0,1),t,0,2*pi).n())

@@ -1,0 +1,37 @@
+#MrG 2015.0619 REVIEWA Limits (filks: Calculus Sleigh Ride & Differentiabul Song)
+#1) Graphing a Rational Function: h(x)=f(x)/g(x), f(x)=2*x^2-2, g(x)=3*x^2-3*x-6)
+show("#1) Graphing a Rational Function: h(x)=f(x)/g(x), f(x)=2*x^2-2, g(x)=3*x^2-3*x-6)")
+f(x)=2*x^2-2;show("f(x)=",f(x));show("f(x)=",f(x).factor())
+g(x)=3*x^2-3*x-6;show("g(x)=",g(x));show("g(x)=",g(x).factor())
+h(x)=f(x)/g(x);show("h(x)=",h(x));show("h(x)=",h(x).factor())
+show("lim from the left of x=-1: ",lim(h(x),x=-1,dir='left'))
+show("lim from the right of x=-1: ",lim(h(x),x=-1,dir='right'))
+show("lim both sides of x=-1: ",lim(h(x),x=-1))
+show("lim from the left of x=2: ",lim(h(x),x=2,dir='left'))
+show("lim from the right of x=2: ",lim(h(x),x=2,dir='right'))
+show("lim both sides of x=2: ",lim(h(x),x=2))
+show("lim at infinity: ",lim(h(x),x=infinity))
+show("lim at -infinity: ",lim(h(x),x=-infinity))
+#plot(h(x),xmin=-4,xmax=4,ymin=-10,ymax=10) 
+show("")
+
+#2) L'Hopital's Rule 
+show("#2) L'Hopital's Rule (filk)")
+f(x)=sin(x)/x;show("f(x)=",f(x))
+show("limit from the left of x=0: ",lim(f(x),x=0,dir='left'))
+show("limit from the right of x=0: ",lim(f(x),x=0,dir='right'))
+show("limit at x=0: ",lim(f(x),x=0))
+g(x)=(3*x^5-14*x^3)/x^5;show("g(x)=",g(x))
+show("limit as x approaches +infinity",lim(g(x),x=infinity))
+show("")
+
+#3) Difference Quotient 
+show("#3) Difference Quotient (filk)")
+var('h')
+f(x)=1024-16*x^2
+show("f(x)=",f(x))
+show("f(x+h)-f(x)=",f(x+h)-f(x))
+show("f(x+h)-f(x)=",expand(f(x+h)-f(x)))
+show("f(x+h)-f(x)=",expand((f(x+h)-f(x))/h))
+show("f'(x)=",lim(expand((f(x+h)-f(x))/h),h=0))
+

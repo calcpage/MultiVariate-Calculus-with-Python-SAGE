@@ -1,0 +1,46 @@
+#MrG 2018.0516 NCC01 2D Vectors!
+#1) How to add 2D Vectors?
+show("#1) How to add 2D Vectors?")
+v=vector([2,3]);show(v)
+w=vector([3,-4]);show(w)
+s=v+w;show(s)
+vp=plot(v,color='red')
+wp=plot(w,color='green')
+sp=plot(s)
+show(vp+wp+sp,aspect_ratio=1)
+
+#2) How to subtract 2D Vectors?
+show("#2) How to subtract 2D Vectors?")
+show(v)
+show(-w)
+d=v-w;show(d)
+dp=plot(d)
+negWp=plot(-w,color='purple')
+show(vp+negWp+dp,aspect_ratio=1)
+
+#3) What is a Scalar Product?
+show("#3) What is a Scalar Product?")
+v=vector([2,3]);show("v=",v)
+w=vector([3,-4]);show("w=",w)
+show("3*v=",3*v)
+show("2*w=",2*w)
+show("3*v-2*w",3*v-2*w)
+vp=plot(v,color='red')
+wp=plot(w,color='green')
+tripleVp=plot(3*v)
+doubleWp=plot(-2*w)
+diff=plot(3*v-2*w)
+show("|v|=",abs(v))
+show("|3*v|=",abs(3*v))
+show("|w|=",abs(w))
+show("|2*w|=",abs(2*w))
+show(vp+tripleVp+wp+doubleWp+diff,aspect_ratio=1)
+
+#4) What is the Dot Product v*w=abs(v)*abs(w)*cos(t)?
+show("#4) What is the Dot Product?")
+show("v=",v)
+show("w=",)
+show("v*w=",v.dot_product(w))
+t=arccos(v.dot_product(w)/(abs(v)*abs(w)))
+show("t=",t.n()," radians")
+show("t=",(t*180/pi).n()," degrees")

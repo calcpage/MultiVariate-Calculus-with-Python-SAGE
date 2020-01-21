@@ -1,0 +1,32 @@
+#MrG 2018.0630 UMC23 Surface Area
+#1) Find the Surface Area of the Plane z=2-x-y aka x+y+z=2 in the first octant
+show("#1) Find the Surface Area of the Plane z=2-x-y in the first octant")
+var('y')
+z=2-x-y;show("z=",z)
+zx=diff(z,x);show("zx=",zx)
+zy=diff(z,y);show("zy=",zy)
+show(integral(integral(sqrt(1+zx^2+zy^2),y,0,2-x),x,0,2))
+show(integral(integral(sqrt(1+zx^2+zy^2),y,0,2-x),x,0,2).n())
+show("")
+
+#2) Find the Surface Area of the surface f(x,y)=1-x^2+y above the triangular region (1,0,0), (0,-1,0) and (0,1,0)
+show("#2) Find the Surface Area of the surface z=1-x^2+y above the triangular region (1,0,0), (0,-1,0) and (0,1,0)")
+f=1-x^2+y;show("f(x,y)=",f)
+fx=diff(f,x);show("fx(x,y)=",fx)
+fy=diff(f,y);show("fy(x,y)=",fy)
+show(integral(integral(sqrt(1+fx^2+fy^2),y,x-1,1-x),x,0,1))
+show(integral(integral(sqrt(1+fx^2+fy^2),y,x-1,1-x),x,0,1).n())
+show("")
+
+#3) Find the Surface Area of the ice cream z=sqrt(x^2+y^2) above the region x^2+y^2<=1
+show("#3) Find the Surface Area of the ice cream z=sqrt(x^2+y^2) above the region x^2+y^2<=1")
+g=sqrt(x^2+y^2);show("g(x,y)=",g)
+gx=diff(g,x);show("gx(x,y)=",gx)
+gy=diff(g,y);show("gy(x,y)=",gy)
+show("sqrt(1+gx^2+gy^2)=",sqrt(1+gx^2+gy^2))
+show("sqrt(1+gx^2+gy^2)=",sqrt(1+gx^2+gy^2).canonicalize_radical())
+var('r,t')
+show(sqrt(2)*integral(integral(r,r,0,1),t,0,2*pi))
+var('z')
+#implicit_plot3d(x^2+y^2-z^2==0, (x, -3, 3), (y, -3,3), (z, -3,3))
+implicit_plot3d(sqrt(x^2+y^2)==z, (x, -3, 3), (y, -3,3), (z, -3,3))

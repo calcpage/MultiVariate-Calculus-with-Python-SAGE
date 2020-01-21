@@ -1,0 +1,22 @@
+#MrG 2018.0628 UMC20 Volume
+#1) What is the volume in space: integral(integral(6-2*y,y,0,2),x,0,4)
+show("#1) What is the volume in space: integral(integral(6-2*y,y,0,2),x,0,4)")
+var('y')
+show(integral(integral(6-2*y,y,0,2),x,0,4))
+show("volume above rectangle 0<=x<=4, 0<=y<=2 in the xy-plane bounded above by the plane z=6-2*y")
+show("")
+
+#2a) What is the volume in space: integral(integral(sin(y^2),y,x/2,1),x,0,2)
+show("#2a) What is the volume in space: integral(integral(sin(y^2),y,x/2,1),x,0,2)")
+var('y')
+show(integral(integral(sin(y^2),y,x/2,1),x,0,2))
+show(integral(integral(sin(y^2),y,x/2,1),x,0,2).n())
+show("volume above triangle 0<=x<=2, x/2<=y<=1 in the xy-plane bounded above by the curve z=sin(y^2)")
+show("")
+
+#2b) What is the volume in space: integral(integral(sin(y^2),x,0,2*y),y,0,1)
+show("#2b) What is the volume in space: integral(integral(sin(y^2),x,0,2*y),y,0,1)")
+var('y')
+show(integral(integral(sin(y^2),x,0,2*y),y,0,1))
+show(integral(integral(sin(y^2),x,0,2*y),y,0,1).n())
+show("volume above triangle 0<=y<=1, 0<=x<=2*y in the xy-plane bounded above by the curve z=sin(y^2)")
